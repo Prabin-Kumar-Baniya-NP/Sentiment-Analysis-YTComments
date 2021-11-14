@@ -25,7 +25,7 @@ SECRET_KEY = '4gcdgrs728xzt$012v^y@ajw-uo^0kiz21g&enm+euc6marwld'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["sentiment-analysis-yt-comments.herokuapp.com", "127.0.0.1"]
 
 
 # Application definition
