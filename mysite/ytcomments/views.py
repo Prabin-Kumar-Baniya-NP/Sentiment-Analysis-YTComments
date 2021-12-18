@@ -9,6 +9,10 @@ def index(request):
 
 def analysis(request):
     videoURL = str(request.GET.get("videoURL"))
-    videoId = videoURL[videoURL.find("v=")+2: videoURL.find("&")]
+    if "&" in videoURL:
+        videoId = videoURL[videoURL.find("v=")+2: videoURL.find("&")]
+    else:
+        videoId = videoURL[videoURL.find("v=")+2::]
+    print(videoId)
     result = analysizeComments(videoId, 2000)
     return render(request, "ytcomments/result.html", {"result": result})
